@@ -1,2 +1,8 @@
 # advent_of_code_2022
-Advent of Code is an Advent calendar of small programming puzzles: here I post my solutions for 2022 event!
+
+![Advent_of_code_cover Photo Credit: @anniespratt|unsplash.com](https://github.com/asyaparfenova/advent_of_code_2021/blob/main/cover.jpg?raw=true "Photo Credit: 
+@Joanna Kosinska|unsplash.com")
+
+In this repository I am posting solutions for "Advent of Code 2022".
+
+Let's see how it goes...
