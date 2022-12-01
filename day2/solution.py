@@ -1,4 +1,4 @@
-def get_kcals(input_data):
+def parse_data(input_data):
     input_lines = input_data.split("\n")
     result = []
     subres = []
@@ -24,6 +24,6 @@ def get_n_max(kcals, n):
 if __name__ == "__main__":
     with open("input.txt", "r") as file:
         data = file.read()
-    kcals = get_kcals(data)
-    print(f"The answer for the 1st task is: {get_n_max(kcals, 1)}")
-    print(f"The answer for the 2nd task is: {get_n_max(kcals, 3)}")
+    input = parse_data(data)
+    print(f"The answer for the 1st task is: {get_n_max(input, 1)}")
+    print(f"The answer for the 2nd task is: {get_n_max(input, 3)}")
