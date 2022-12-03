@@ -53,13 +53,15 @@ DICT = {
     "Z": 52,
 }
 
+
 def parse_data(input_data):
     input_lines = input_data.split("\n")
     result = []
     for il in input_lines:
-        subres = list(il)
-        result.append(subres)
+        backpack = list(il)
+        result.append(backpack)
     return result
+
 
 def part_one(data):
     total = 0
@@ -71,16 +73,17 @@ def part_one(data):
         total += dict[found]
     return total
 
+
 def part_two(data):
     total = 0
     dict = DICT
-    for num in range(len(data)//3):
+    for num in range(len(data) // 3):
         sub = []
-        for i in data[3*num]:
-            if i in data[3*num + 1]:
+        for i in data[3 * num]:
+            if i in data[3 * num + 1]:
                 sub.append(i)
         for i in sub:
-            if i in data[3*num + 2]:
+            if i in data[3 * num + 2]:
                 found = i
         total += dict[found]
     return total

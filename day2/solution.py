@@ -1,5 +1,6 @@
 RULES = {"A": (1, "C", "B"), "B": (2, "A", "C"), "C": (3, "B", "A")}
 
+
 def parse_data(input_data):
     input_lines = input_data.split("\n")
     result = []
@@ -23,6 +24,7 @@ def part_one(data):
             score = rules[you][0]
         total += score
     return total
+
 
 def part_two(data):
     rules = {"A": (1, "C", "B"), "B": (2, "A", "C"), "C": (3, "B", "A")}
