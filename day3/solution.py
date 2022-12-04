@@ -93,6 +93,5 @@ if __name__ == "__main__":
     with open("input.txt", "r") as file:
         data = file.read()
     input = parse_data(data)
-    print(ord("A"))
     print(f"The answer for the 1st task is: {part_one(input)}")
     print(f"The answer for the 2nd task is: {part_two(input)}")
