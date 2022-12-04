@@ -13,11 +13,10 @@ def parse_data(input_data):
         result.append(clean_pair)
     return result
 
-
 def part_one(data):
     total = 0
     for pair in data:
-        if pair[0].issubset(pair[1]) or pair[1].issubset(pair[0]):
+        if pair[0] <= pair[1] or pair[1] <= pair[0]:
             total += 1
     return total
 
