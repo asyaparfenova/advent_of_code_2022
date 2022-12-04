@@ -25,8 +25,7 @@ def part_one(data):
 def part_two(data):
     total = 0
     for pair in data:
-        pairs = pair[0] | pair[1]
-        if len(pairs) < len(pair[0]) + len(pair[1]):
+        if len(pair[0] | pair[1]) < len(pair[0]) + len(pair[1]):
             total += 1
     return total
 
