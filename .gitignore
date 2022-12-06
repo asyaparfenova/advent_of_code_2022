@@ -133,3 +133,6 @@ dmypy.json
 
 # Input files
 day*/input.txt
+
+# experiments
+experiments/
