@@ -20,20 +20,14 @@ def head_move(hx, hy, dir):
 
 
 def follow(hx, hy, tx, ty):
-    if abs(tx - hx) <= 1 and abs(ty - hy) <= 1:
-        tx, ty = tx, ty
-    elif abs(tx - hx) + abs(ty - hy) == 2:
+    if abs(tx - hx) + abs(ty - hy) == 4:
         tx = (tx + hx) // 2
         ty = (ty + hy) // 2
-    elif abs(tx - hx) + abs(ty - hy) == 3:
-        if abs(tx - hx) == 2:
-            tx = (tx + hx) // 2
-            ty = hy
-        else:
-            tx = hx
-            ty = (ty + hy) // 2
-    else:
+    elif abs(tx - hx) >= 2:
         tx = (tx + hx) // 2
+        ty = hy
+    elif abs(ty - hy) >= 2:
+        tx = hx
         ty = (ty + hy) // 2
     return tx, ty
 
@@ -60,6 +54,7 @@ def move_rope_by_instructions(rope_length, commands):
         rope.append([0, 0])
     for command in commands:
         rope, t_trace = move(rope, command, t_trace)
+        # print(rope)
     return len(t_trace)
 
 
