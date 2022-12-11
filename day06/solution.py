@@ -1,12 +1,14 @@
-def part_one(data):
-    for n in range(len(data) - 3):
-        if len(set(data[n:n+4])) == 4:
-            return n + 4
+from functools import partial
 
-def part_two(data):
-    for n in range(len(data) - 13):
-        if len(set(data[n:n+14])) == 14:
-            return n + 14
+
+def detect_marker(data, marker):
+    for n, m in enumerate(data[: -marker + 1]):
+        if len(set(data[n : n + marker])) == marker:
+            return n + marker
+
+
+part_one = partial(detect_marker, marker=4)
+part_two = partial(detect_marker, marker=14)
 
 
 if __name__ == "__main__":
