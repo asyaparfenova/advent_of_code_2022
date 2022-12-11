@@ -29,6 +29,8 @@ def part_one(commands):
 
 
 def screenwrite(i, sprite, screen):
+    if i % 40 == 39:
+        screen += "\n"
     if i % 40 in sprite:
         screen += "#"
     else:
@@ -40,7 +42,7 @@ def screenwrite(i, sprite, screen):
 def part_two(commands):
     sprite = [0, 1, 2]
     i = 0
-    screen = ""
+    screen = "\n"
     # create screen input
     for command in commands:
         if command[0] == "noop":
@@ -53,9 +55,7 @@ def part_two(commands):
                 sprite[1] + command[1],
                 sprite[2] + command[1],
             ]
-    # print screen
-    for n in range(len(screen) // 40):
-        print(screen[n * 40 : n * 40 + 40])
+    return screen
 
 
 if __name__ == "__main__":
@@ -63,6 +63,4 @@ if __name__ == "__main__":
         data = file.read()
     commands = parse_data(data)
     print(f"The answer for the 1st task is: {part_one(commands)}")
-    print(f"The answer for the 2nd task is:")
-    # print visual representation of the part two answer
-    part_two(commands)
+    print(f"The answer for the 2nd task is: {part_two(commands)}")
