@@ -11,4 +11,5 @@ Structure of the repository:
 - input.txt is a competition input, added to gitignore
 - solution.py is a python file that icludes fuction reading input, parsing it and producing a solution.
 
-Let's see how it goes...
+Notes and to-dos:
+- day14/part2 solution is very far from ideal and runs over 15 min - the first candidate for future optimization.
